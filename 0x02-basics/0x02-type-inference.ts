@@ -18,5 +18,3 @@ const user = {
   age: 25,
 };
 user.location = "Benoni"; // Will throw an error because an interface was "automatically created" and now the user object is only limited to age and name
-
-
