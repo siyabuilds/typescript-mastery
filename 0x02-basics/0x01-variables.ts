@@ -53,3 +53,42 @@ let cartStatus: "paid" | "delivered" | "open" = "delivered";
 cartStatus = "open"; // Allowed
 cartStatus = "paid"; // Also allowed
 cartStatus = undefined; // Not allowed since undefined is not part of our cart types
+
+// Arrays
+// array types in TS are way cooler than possibly explained
+const arrayOfItems: string[] = ["Clothes", "Food", "Personal Hard drive"]; //string[] as a a type ensures that we only have strings in the array
+const arrayOfBooleans: boolean[] = [true, false, false, false, true];
+const arrayOfInts: number[] = [10, 20, 30, 40, 50, 60, 70];
+const arrayOfStringsAndNumbers: (string | number)[] = [
+  "Samson",
+  22,
+  "Dude",
+  12,
+  "Potatoes",
+  10,
+];
+
+// Objects
+// We have `interfaces` in TS that let us define the structure of objects
+interface Person {
+  name: string;
+  age: number;
+  devStatus?: boolean; //An optional value for an object, can be excluded when needed
+}
+
+const user: Person = {
+  name: "Samson",
+  age: 22,
+  // devStatus is excluded but this won't throw an error since we used the'?' syntax in the interface
+};
+
+// Interfaces where we don't exactly know what will be in the object but we know the intended value structure
+interface Users {
+  [key: string]: string;
+}
+
+const objectOfNames: Users = {
+  firstUser: "Samson",
+  secondUser: "Spha",
+  thirdUser: "Markuptitan",
+};
