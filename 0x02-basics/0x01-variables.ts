@@ -54,6 +54,9 @@ cartStatus = "open"; // Allowed
 cartStatus = "paid"; // Also allowed
 cartStatus = undefined; // Not allowed since undefined is not part of our cart types
 
+// More literal types
+const escapeRoutes: 0 | 1 = 1;
+const samsonHouse: "apartment" | "house" | "penthouse" = "penthouse";
 // Arrays
 // array types in TS are way cooler than possibly explained
 const arrayOfItems: string[] = ["Clothes", "Food", "Personal Hard drive"]; //string[] as a a type ensures that we only have strings in the array
