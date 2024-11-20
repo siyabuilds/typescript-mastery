@@ -8,7 +8,7 @@ const greetUser = (
 ): string => {
   let message = `Hello, ${name}. You live on ${location}.`;
 
-  if (age) {
+  if (age !== undefined) {
     message += `You are ${age} years old.`;
   } else {
     message += `Age remains unknown.`;
