@@ -16,3 +16,20 @@ const greetUser = (
   return message;
 };
 
+// Simple calculate function
+
+const calculate = (
+  operation: string = "add",
+  a: number = 0,
+  b: number = 0
+): number => {
+  if (operation === "subtract") {
+    return b - a;
+  }
+
+  if (operation === "add") {
+    return a + b;
+  }
+
+  throw new Error("Operation not supported currently");
+};
